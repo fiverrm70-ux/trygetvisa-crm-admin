@@ -25,7 +25,9 @@ import AddLeadModal from './components/AddLeadModal';
 import styles from './LeadsPage.module.css';
 
 const { TextArea } = Input;
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  'https://trygetvisa-crm-api.onrender.com';
 
 type User = {
   id: number;

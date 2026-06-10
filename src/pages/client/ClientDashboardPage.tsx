@@ -12,7 +12,9 @@ import api from '../../api/api';
 import AdminLayout from '../../components/layout/AdminLayout';
 
 import styles from '../employees/EmployeesPage.module.css';
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  'https://trygetvisa-crm-api.onrender.com';
 type ProcessUpdate = {
   id: number;
   status: string;
