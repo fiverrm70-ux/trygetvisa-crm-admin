@@ -1,0 +1,570 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fffaf0 0%, #ffffff 44%, #eef8f3 100%);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.38fr 1fr;
+  padding-top: 0;
+}
+
+.leftSection {
+  position: relative;
+  overflow: hidden;
+  padding: 42px 72px 46px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 250, 239, 0.88) 0%,
+      rgba(255, 247, 224, 0.52) 38%,
+      rgba(0, 70, 52, 0.95) 72%,
+      #003f31 100%
+    ),
+    url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=90');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(212, 175, 55, 0.22),
+      transparent 28%
+    ),
+    radial-gradient(circle at 20% 78%, rgba(0, 80, 63, 0.8), transparent 34%);
+  pointer-events: none;
+}
+
+.logoRow,
+.heroContent,
+.workflowCard,
+.statsGrid,
+.bottomFeatures {
+  position: relative;
+  z-index: 1;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #004333;
+}
+
+.logoRow span {
+  color: #d4af37;
+  font-size: 28px;
+}
+
+.logoRow h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 950;
+}
+
+.heroContent {
+  margin-top: 28px;
+  max-width: 720px;
+}
+.heroContent h1 {
+  margin: 0;
+  color: #063f34;
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -1.7px;
+  font-weight: 950;
+}
+
+.heroContent h1 span {
+  color: #c99b28;
+}
+
+.heroContent p {
+  max-width: 560px;
+  margin: 28px 0 0;
+  color: #183c36;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 600;
+}
+
+.workflowCard {
+  width: min(720px, 100%);
+  margin-top: 36px;
+  padding: 26px 34px 28px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 66, 51, 0.96),
+    rgba(0, 95, 72, 0.92)
+  );
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 28px 65px rgba(0, 55, 42, 0.28);
+}
+
+.workflowTitle {
+  display: block;
+  margin-bottom: 20px;
+  color: #f4c84e;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 950;
+  letter-spacing: 1px;
+}
+
+.workflowSteps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step {
+  text-align: center;
+  color: #fff;
+  min-width: 84px;
+}
+
+.stepIcon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff7d6;
+  font-size: 22px;
+  border: 1px solid rgba(212, 175, 55, 0.7);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.step strong {
+  display: block;
+  font-size: 13px;
+}
+
+.step small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.dashed {
+  flex: 1;
+  max-width: 42px;
+  border-top: 2px dashed rgba(212, 175, 55, 0.65);
+  margin: 0 8px;
+}
+
+.statsGrid {
+  width: min(860px, 100%);
+  margin-top: 34px;
+  padding: 20px 28px;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  background: rgba(0, 66, 51, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 95, 72, 0.78);
+  color: #f4c84e;
+  font-size: 22px;
+  box-shadow: 0 12px 28px rgba(0, 30, 23, 0.24);
+}
+
+.statCard strong {
+  display: block;
+  color: #f7c85a;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.statCard span {
+  display: block;
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bottomFeatures {
+  width: min(860px, 100%);
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  color: #ffffff;
+}
+
+.bottomFeatures div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bottomFeatures svg {
+  color: #f4c84e;
+  font-size: 24px;
+}
+
+.bottomFeatures span {
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.rightSection {
+  position: relative;
+  padding: 42px 72px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(
+    circle at top,
+    #fff8e7 0%,
+    #ffffff 42%,
+    #fffdf8 100%
+  );
+  border-left: 7px solid #c4942d;
+  box-shadow: -24px 0 80px rgba(11, 31, 58, 0.08);
+}
+
+.topBadge {
+  text-align: center;
+}
+
+.shieldCircle {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #006b50, #0fa777);
+  color: #fff7d6;
+  font-size: 32px;
+  outline: 10px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 18px 34px rgba(0, 95, 72, 0.24);
+}
+
+.topBadge span {
+  color: #008060;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 2px;
+}
+
+.rightSection h2 {
+  margin: 18px 0 8px;
+  text-align: center;
+  color: #071f35;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-weight: 950;
+}
+
+.subtitle {
+  margin: 0;
+  text-align: center;
+  color: #44576d;
+  font-size: 15px;
+}
+
+.rolesGrid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.roleCard {
+  position: relative;
+  min-height: 118px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(11, 31, 58, 0.12);
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 16px 34px rgba(11, 31, 58, 0.08);
+  transition: 0.25s ease;
+}
+
+.roleCard:hover,
+.activeRole {
+  transform: translateY(-2px);
+  border-color: #00966f;
+  background: linear-gradient(135deg, #ffffff, #ecfdf5);
+  box-shadow: 0 20px 44px rgba(0, 128, 96, 0.14);
+}
+
+.activeRole::after {
+  content: '✓';
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #007f61;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.roleIcon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #006b50, #0ea472);
+  font-size: 24px;
+  box-shadow: 0 14px 28px rgba(0, 95, 72, 0.2);
+}
+
+.roleCard:nth-child(3) .roleIcon,
+.roleCard:nth-child(4) .roleIcon {
+  background: linear-gradient(135deg, #f4da8b, #d4af37);
+  color: #073b2e;
+}
+
+.roleText strong {
+  display: block;
+  color: #071f35;
+  font-size: 17px;
+  font-weight: 950;
+}
+
+.roleText span {
+  display: block;
+  margin-top: 6px;
+  color: #40566f;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.selectedRoleBox {
+  margin-top: 22px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: linear-gradient(135deg, #06223c, #07385e);
+  box-shadow: 0 18px 36px rgba(6, 34, 60, 0.24);
+}
+
+.selectedLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.selectedIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #075c48;
+  color: #d4af37;
+  font-size: 21px;
+}
+
+.selectedLeft span {
+  display: block;
+  color: #f7c85a;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 1px;
+}
+
+.selectedLeft strong {
+  display: block;
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.selectedRoleBox p {
+  max-width: 240px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 24px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 18px;
+  color: #071f35;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.inputWrapper {
+  height: 56px;
+  margin-top: 8px;
+  padding: 0 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(11, 31, 58, 0.14);
+  box-shadow: 0 10px 22px rgba(11, 31, 58, 0.04);
+}
+
+.inputWrapper svg {
+  color: #8090a3;
+  font-size: 18px;
+}
+
+.inputWrapper input {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  color: #071f35;
+  font-size: 15px;
+  background: transparent;
+}
+
+.inputWrapper:focus-within {
+  border-color: #008060;
+  box-shadow: 0 0 0 4px rgba(0, 128, 96, 0.1);
+}
+
+.loginButton {
+  width: 100%;
+  height: 62px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #008060, #11aa7c);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 950;
+  cursor: pointer;
+  box-shadow: 0 18px 38px rgba(0, 128, 96, 0.28);
+  transition: 0.25s ease;
+}
+
+.loginButton svg {
+  color: #f7c85a;
+}
+
+.loginButton:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #006b50, #008060);
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .rightSection {
+    border-left: 0;
+    border-top: 7px solid #c4942d;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftSection,
+  .rightSection {
+    padding: 34px 22px;
+  }
+
+  .heroContent {
+    margin-top: 48px;
+  }
+
+  .heroContent h1 {
+    font-size: 38px;
+  }
+
+  .workflowSteps,
+  .statsGrid,
+  .bottomFeatures,
+  .rolesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowSteps {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dashed {
+    display: none;
+  }
+
+  .statsGrid {
+    display: grid;
+  }
+
+  .bottomFeatures {
+    display: grid;
+  }
+
+  .selectedRoleBox {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .selectedRoleBox p {
+    max-width: 100%;
+  }
+
+  .rightSection h2 {
+    font-size: 34px;
+  }
+}
