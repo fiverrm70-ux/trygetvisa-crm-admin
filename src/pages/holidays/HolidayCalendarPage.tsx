@@ -129,13 +129,6 @@ export default function HolidayCalendarPage() {
 
   const upcomingHolidays = upcomingHolidayItems.length;
 
-  const monthHolidays = useMemo(() => {
-    return holidays.filter((holiday) => {
-      const date = new Date(holiday.date);
-      return holiday.isActive && date.getMonth() === selectedMonth;
-    });
-  }, [holidays, selectedMonth]);
-
   const holidayByDate = useMemo(() => {
     const map = new Map<string, Holiday>();
 
